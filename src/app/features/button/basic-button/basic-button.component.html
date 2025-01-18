@@ -1,0 +1,46 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Button Component</h1>
+    <p class="description">
+        The Giggly Button component provides a set of reusable buttons with various variants and states.
+        These buttons are designed to be playful, interactive, and user-friendly.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Button Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Button Preview</h2>
+                <div class="button-preview">
+                    <giggly-button variant="primary">Primary Button</giggly-button>
+                    <giggly-button variant="secondary">Secondary Button</giggly-button>
+                    <giggly-button [variant]="'primary'" [disabled]="true">Disabled Button</giggly-button>
+                    <giggly-button variant="playful">Playful Button</giggly-button>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+          &lt;giggly-button variant="primary"&gt;Primary Button&lt;/giggly-button&gt;
+          &lt;giggly-button variant="secondary"&gt;Secondary Button&lt;/giggly-button&gt;
+          &lt;giggly-button [variant]="'primary'" [disabled]="true"&gt;Disabled Button&lt;/giggly-button&gt;
+          &lt;giggly-button variant="playful"&gt;Playful Button&lt;/giggly-button&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

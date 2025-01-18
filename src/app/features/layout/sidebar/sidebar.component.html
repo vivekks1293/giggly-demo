@@ -1,0 +1,14 @@
+<aside class="app-sidebar">
+  <ul>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu()">Buttons <span class="arrow" [ngClass]="{'open': isSubMenuOpen}">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="isSubMenuOpen" class="submenu">
+        <li><a href="/basicbutton">Basic Button</a></li>
+        <li><a href="#">Icon Button</a></li>
+        <li><a href="#">Button Group</a></li>
+      </ul>
+    </li>
+  </ul>
+</aside>

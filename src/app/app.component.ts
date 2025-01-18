@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'giggly-demo';
+  handleClick() {
+    alert('Giggly Button Clicked!');
+  }
 }

@@ -1,0 +1,14 @@
+.app-container {
+    margin-top: 60px; /* Header height */
+    display: flex;
+  }
+  
+  main.app-content {
+    margin-left: 250px; /* Sidebar width */
+    padding: 20px;
+    flex: 1;
+    background-color: #f4f4f4;
+    min-height: calc(100vh - 60px); /* Subtract header height */
+    overflow: auto;
+  }
+  
