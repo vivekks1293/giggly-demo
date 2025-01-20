@@ -1,0 +1,112 @@
+.mainbody {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #333;
+    text-align: center;
+}
+
+.dashboard {
+    padding: 60px 20px;
+}
+
+.hero {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero:hover {
+    transform: translateY(-5px);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6f61;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #ff6f61, #ff9a9e);
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features {
+    margin-top: 80px;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.progress-section {
+    background: #9b9374;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 80px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    text-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: white;
+}
