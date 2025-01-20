@@ -1,0 +1,10 @@
+{
+
+    "hosting": {
+  
+      "site": "mygigglyui",
+  
+      "public": "dist/browser"
+    }
+  
+  }
