@@ -1,0 +1,18 @@
+{
+  "routes": {
+    "/https://vivekks1293.github.io/giggly-demo": {},
+    "/https://vivekks1293.github.io/giggly-demo/basicbutton": {},
+    "/https://vivekks1293.github.io/giggly-demo/buttongroup": {},
+    "/https://vivekks1293.github.io/giggly-demo/checkbox": {},
+    "/https://vivekks1293.github.io/giggly-demo/datepicker": {},
+    "/https://vivekks1293.github.io/giggly-demo/dropdown": {},
+    "/https://vivekks1293.github.io/giggly-demo/fileupload": {},
+    "/https://vivekks1293.github.io/giggly-demo/iconbutton": {},
+    "/https://vivekks1293.github.io/giggly-demo/radiobutton": {},
+    "/https://vivekks1293.github.io/giggly-demo/slider": {},
+    "/https://vivekks1293.github.io/giggly-demo/splitbutton": {},
+    "/https://vivekks1293.github.io/giggly-demo/switch": {},
+    "/https://vivekks1293.github.io/giggly-demo/textarea": {},
+    "/https://vivekks1293.github.io/giggly-demo/textbox": {}
+  }
+}
