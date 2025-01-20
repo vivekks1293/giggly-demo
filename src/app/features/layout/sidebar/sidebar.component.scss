@@ -1,28 +1,28 @@
-.app-sidebar {
+.sidebar {
   width: 250px;
   background-color: #333;
   color: white;
-  position: fixed;
-  top: 60px; /* Below the header */
-  left: 0;
-  height: calc(100vh - 60px);
-  padding: 20px 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Allow sidebar to grow with content */
+  min-height: 100vh; /* Ensure it covers the viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  position: sticky; /* Keep the sidebar fixed while scrolling */
+  top: 0;
 
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 
     li {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
 
       a {
         color: white;
         text-decoration: none;
-        display: block;
-        padding: 10px 20px;
-        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
         transition: background-color 0.3s;
 
         &:hover {
@@ -31,30 +31,30 @@
       }
 
       .submenu {
-        margin-top: 10px;
+        list-style: none;
         padding-left: 20px;
 
         li {
-          margin-bottom: 10px;
+          margin-bottom: 5px;
 
           a {
-            background-color: #444;
             font-size: 14px;
+            color: #ccc;
 
             &:hover {
-              background-color: #555;
+              color: white;
             }
           }
         }
       }
 
       .arrow {
-        float: right;
-        transition: transform 0.3s;
-      }
+        font-size: 12px;
+        transition: transform 0.3s ease;
 
-      .arrow.open {
-        transform: rotate(180deg);
+        &.open {
+          transform: rotate(180deg);
+        }
       }
     }
   }

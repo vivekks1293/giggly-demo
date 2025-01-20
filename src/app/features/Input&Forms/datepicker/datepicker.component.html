@@ -1,0 +1,60 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Date Picker</h1>
+    <p class="description">
+        The Giggly Date Picker is a modern and playful calendar-based date selection component that provides a fun yet
+        professional experience. Designed with user-friendly interactions in mind, it allows for flexible date selection
+        while maintaining consistency with the Giggly UI theme.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Button Preview</h2>
+                <div class="button-preview">
+                    <giggly-date-picker label="Select Your Birthday" [minDate]="minDate" [maxDate]="maxDate"
+                        [(ngModel)]="selectedDate" (dateChange)="handleDateChange($event)">
+                    </giggly-date-picker>
+
+                    <p>Selected Date: {{ selectedDate | date }}</p>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-date-picker 
+                label="Select Your Birthday" 
+                [minDate]="'2000-01-01'" 
+                [maxDate]="'2030-12-31'" 
+                [(ngModel)]="selectedDate"
+                (dateChange)="handleDateChange($event)"&gt;
+              &lt;/giggly-date-picker&gt;
+              
+              &lt;giggly-date-picker 
+                label="Event Date" 
+                [(ngModel)]="eventDate" 
+                [disabled]="true"&gt;
+              &lt;/giggly-date-picker&gt;
+              
+              &lt;p&gt;Selected Date: &#123; &#123; selectedDate &#125;&#125;&lt;/p&gt;
+              &lt;p&gt;Event Date: &#123; &#123; eventDate &#125;&#125;&lt;/p&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

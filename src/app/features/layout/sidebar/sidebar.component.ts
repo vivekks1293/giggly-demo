@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-  isSubMenuOpen: boolean = false; 
+  activeSubmenu: string | null = null; 
 
-  toggleSubMenu(): void {
-    this.isSubMenuOpen = !this.isSubMenuOpen;
+  toggleSubMenu(menu: string): void {
+    this.activeSubmenu = this.activeSubmenu === menu ? null : menu;
   }
 }
