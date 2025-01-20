@@ -1,0 +1,94 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Button Group</h1>
+    <p class="description">
+      The Group Button is a versatile UI component that allows grouping multiple buttons together, providing a cohesive design and functionality. It is part of the Giggly UI library, designed to add playful yet professional elements to your user interface.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Button Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Button Preview</h2>
+                <div class="button-preview">
+                    <h3>Icons only</h3>
+                    <giggly-button-group [buttons]="[
+    { icon: 'fas fa-bold', variant: 'primary' },
+    { icon: 'fas fa-italic', variant: 'secondary' },
+    { icon: 'fas fa-underline', variant: 'danger' }
+  ]" orientation="horizontal"></giggly-button-group>
+
+                    <h3>Text only</h3>
+                    <giggly-button-group [buttons]="[
+    { label: 'Bold', variant: 'primary' },
+    { label: 'Italic', variant: 'secondary' },
+    { label: 'Underline', variant: 'danger' }
+  ]" orientation="horizontal"></giggly-button-group>
+
+                    <h3>Icons + Text</h3>
+                    <giggly-button-group [buttons]="[
+    { label: 'Bold', icon: 'fas fa-bold', variant: 'primary' },
+    { label: 'Italic', icon: 'fas fa-italic', variant: 'secondary' },
+    { label: 'Underline', icon: 'fas fa-underline', variant: 'danger' }
+  ]" orientation="horizontal"></giggly-button-group>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <h3>Text only</h3>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-button-group
+                [buttons]="[
+                &#123; icon: 'fas fa-bold', variant: 'primary' &#125; ,
+                &#123; icon: 'fas fa-italic', variant: 'secondary' &#125; ,
+                &#123;   icon: 'fas fa-underline', variant: 'danger' &#125; 
+                ]"
+                orientation="horizontal"
+              &gt;
+              </code>
+            </pre>
+                <h3>Text only</h3>
+                <pre class="code-container">
+    <code class="code-block">
+&lt;giggly-button-group
+  [buttons]="[
+  &#123; label: 'Bold', variant: 'primary' &#125;,
+  &#123; label: 'Italic', variant: 'secondary' &#125;,
+  &#123; label: 'Underline', variant: 'danger' &#125;
+  ]"
+  orientation="horizontal"
+&gt;
+&lt;/giggly-button-group&gt;
+    </code>
+  </pre>
+                <h3>Icons + Text</h3>
+                <pre class="code-container">
+    <code class="code-block">
+&lt;giggly-button-group
+  [buttons]="[
+  &#123; label: 'Bold', icon: 'fas fa-bold', variant: 'primary' &#125;,
+  &#123; label: 'Italic', icon: 'fas fa-italic', variant: 'secondary' &#125;,
+  &#123; label: 'Underline', icon: 'fas fa-underline', variant: 'danger' &#125;
+  ]"
+  orientation="horizontal"
+&gt;
+&lt;/giggly-button-group&gt;
+    </code>
+  </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

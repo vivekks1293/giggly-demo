@@ -1,0 +1,63 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly File Upload</h1>
+    <p class="description">
+        The Giggly File Upload component is a versatile file uploader that provides both drag-and-drop and button-based upload functionalities. It allows users to select single or multiple files, supports various file formats, and emits an event containing the uploaded files for further processing.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Button Preview</h2>
+                <div class="button-preview">
+                    <giggly-file-upload 
+                    label="Upload Your Documents" 
+                    [multiple]="true"
+                    accept="image/*,application/pdf"
+                    (fileSelected)="handleFileUpload($event)">
+                  </giggly-file-upload>
+                  
+                  <!-- <p *ngIf="uploadedFiles.length > 0">
+                    Uploaded Files: 
+                    <ul>
+                      <li *ngFor="let file of uploadedFiles">{{ file.name }}</li>
+                    </ul>
+                  </p> -->
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-file-upload 
+                label="Upload Your Documents" 
+                [multiple]="true"
+                accept="image/*,application/pdf"
+                (fileSelected)="handleFileUpload($event)"&gt;
+              &lt;/giggly-file-upload&gt;
+          
+              &lt;p *ngIf="uploadedFiles.length &gt; 0"&gt;
+                Uploaded Files: 
+                &lt;ul&gt;
+                  &lt;li *ngFor="let file of uploadedFiles"&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/p&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
