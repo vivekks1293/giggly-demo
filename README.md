@@ -1,59 +1,70 @@
-# GigglyDemo
+Giggly UI Library 🎉
+Applink: https://mygigglyui.web.app/
+Welcome to Giggly UI, a playful yet professional Angular component library designed to simplify and enhance your UI development experience. Giggly UI provides a set of customizable, easy-to-use components that seamlessly integrate with Angular applications, ensuring flexibility, accessibility, and a modern design.
+🌟 Features
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+    Playful Yet Professional Design: A unique blend of fun and functionality, ensuring visually appealing components.
+    Angular Friendly: All components are built with Angular best practices, including support for ngModel and reactive forms.
+    Highly Customizable: Each component offers flexible styling and configuration options to match your project's needs.
+    Seamless Form Integration: A variety of form-related components with powerful bindings and validation support.
+    Event-Driven Architecture: Capture component interactions effortlessly with intuitive event emitters.
+    Lightweight & Performant: Optimized for fast performance and minimal footprint.
+    Firebase Deployed Demo: Live Demo showcasing all available components.
 
-## Development server
+📦 Available Components
 
-To start a local development server, run:
+Giggly UI currently includes the following components:
 
-```bash
-ng serve
-```
+    Buttons
+        Standard, Outline, and Icon buttons
+        Customizable colors, sizes, and loading states
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    Inputs & Forms
+        Textarea: Auto-resizing multi-line input
+        Checkbox: Customizable with label options
+        Radio Button: Grouped selection with ngModel support
+        Select/Dropdown: Single & multi-select with search functionality
+        Toggle Switch: Interactive switch with ngModel binding
+        Slider: Range input with customization options
+        Date Picker: Fully re-implemented with min/max date handling and event bindings
+        File Upload: Drag-and-drop or button-based uploads with file capture event
 
-## Code scaffolding
+🚀 Upcoming Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Stay tuned for exciting new components, including:
 
-```bash
-ng generate component component-name
-```
+    Accordion
+    Tabs
+    Toast Notifications
+    Modals
+    Tooltips
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+📖 Installation
 
-```bash
-ng generate --help
-```
+To install Giggly UI in your Angular project:
 
-## Building
+npm install giggly-ui
 
-To build the project run:
+🛠️ Usage
 
-```bash
-ng build
-```
+Import the desired Giggly components into your Angular module:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+import { GigglyButtonModule, GigglyInputModule } from 'giggly-ui';
 
-## Running unit tests
+@NgModule({
+  declarations: [...],
+  imports: [
+    GigglyButtonModule,
+    GigglyInputModule
+  ],
+})
+export class AppModule { }
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Use them in your templates:
 
-```bash
-ng test
-```
+<giggly-button color="primary" (click)="onClick()">Click Me</giggly-button>
+<giggly-input [(ngModel)]="userInput" placeholder="Enter text"></giggly-input>
 
-## Running end-to-end tests
+📚 Documentation
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Check out the full documentation and live examples on our Demo Page.
