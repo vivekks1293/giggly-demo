@@ -27,5 +27,15 @@
         <li><a href="/fileupload">File Upload</a></li>
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Feedbacks')">Feedbacks<span class="arrow" [class.open]="activeSubmenu === 'Feedbacks'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Feedbacks'" class="submenu">
+        <li><a href="/alerts">Alerts</a></li>
+        <li><a href="/snackbar">Snackbar</a></li>
+        <li><a href="/progressbar">Progress Bar</a></li>
+      </ul>
+    </li>
   </ul>
 </aside>
