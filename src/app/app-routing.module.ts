@@ -14,6 +14,9 @@ import { ToggleButtonComponent } from './features/Input&Forms/toggle-button/togg
 import { SliderComponent } from './features/Input&Forms/slider/slider.component';
 import { DatepickerComponent } from './features/Input&Forms/datepicker/datepicker.component';
 import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upload.component';
+import { AlertsComponent } from './features/feedback/alerts/alerts.component';
+import { SnackbarComponent } from './features/feedback/snackbar/snackbar.component';
+import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -28,7 +31,10 @@ const routes: Routes = [
   { path: 'switch', component: ToggleButtonComponent },
   { path: 'slider', component: SliderComponent },
   { path: 'datepicker', component: DatepickerComponent },
-  { path: 'fileupload', component: FileUploadComponent }
+  { path: 'fileupload', component: FileUploadComponent },
+  { path: 'alerts', component: AlertsComponent },
+  { path: 'snackbar', component: SnackbarComponent },
+  { path: 'progressbar', component: ProgressBarComponent }
 ];
 
 @NgModule({

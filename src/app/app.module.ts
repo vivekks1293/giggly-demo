@@ -21,6 +21,9 @@ import { ToggleButtonComponent } from './features/Input&Forms/toggle-button/togg
 import { SliderComponent } from './features/Input&Forms/slider/slider.component';
 import { DatepickerComponent } from './features/Input&Forms/datepicker/datepicker.component';
 import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upload.component';
+import { AlertsComponent } from './features/feedback/alerts/alerts.component';
+import { SnackbarComponent } from './features/feedback/snackbar/snackbar.component';
+import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,10 @@ import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upl
     ToggleButtonComponent,
     SliderComponent,
     DatepickerComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    AlertsComponent,
+    SnackbarComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

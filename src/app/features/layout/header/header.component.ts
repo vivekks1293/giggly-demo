@@ -12,7 +12,7 @@ export class HeaderComponent {
   isClient = false;
 
   ngOnInit() {
-    this.isClient = true; // Ensures rendering only on the client
+    this.isClient = true;
   }
   navigateToDashboard() {
     this.router.navigate(['/']);
