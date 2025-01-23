@@ -16,7 +16,9 @@ import { DatepickerComponent } from './features/Input&Forms/datepicker/datepicke
 import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upload.component';
 import { AlertsComponent } from './features/feedback/alerts/alerts.component';
 import { SnackbarComponent } from './features/feedback/snackbar/snackbar.component';
-import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
+import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component'
+import { CardComponent } from './features/layout/card/card.component';
+import { ModalsComponent } from './features/layout/modals/modals.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -34,7 +36,9 @@ const routes: Routes = [
   { path: 'fileupload', component: FileUploadComponent },
   { path: 'alerts', component: AlertsComponent },
   { path: 'snackbar', component: SnackbarComponent },
-  { path: 'progressbar', component: ProgressBarComponent }
+  { path: 'progressbar', component: ProgressBarComponent },
+  { path: 'cards', component: CardComponent },
+  { path: 'modal', component: ModalsComponent }
 ];
 
 @NgModule({

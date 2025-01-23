@@ -24,6 +24,8 @@ import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upl
 import { AlertsComponent } from './features/feedback/alerts/alerts.component';
 import { SnackbarComponent } from './features/feedback/snackbar/snackbar.component';
 import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
+import { CardComponent } from './features/layout/card/card.component';
+import { ModalsComponent } from './features/layout/modals/modals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,9 @@ import { ProgressBarComponent } from './features/feedback/progress-bar/progress-
     FileUploadComponent,
     AlertsComponent,
     SnackbarComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    CardComponent,
+    ModalsComponent
   ],
   imports: [
     BrowserModule,

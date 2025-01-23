@@ -1,0 +1,67 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Modal Component</h1>
+    <p class="description">
+        The Giggly Modal component is an essential UI element for displaying pop-up content in a structured and visually
+        appealing manner. It provides a flexible layout with distinct sections for the header, content, and footer,
+        allowing developers to customize it according to their needs.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Button Preview</h2>
+                <div class="button-preview">
+                    <giggly-button (click)="openModal()" variant="primary">Open Modal</giggly-button>
+
+
+                    <giggly-modal [title]="'Sticky Footer Modal'" [isVisible]="modalVisible" [width]="'500px'"
+                        [height]="'400px'" (close)="closeModal()">
+
+                        <p>This is the modal content with a custom size.</p>
+                        <p>More content to test scrolling behavior.</p>
+
+                        <ng-container modal-footer>
+                            <giggly-button (click)="closeModal()" variant="secondary">Close</giggly-button>
+                            <giggly-button variant="primary">Submit</giggly-button>
+                        </ng-container>
+                    </giggly-modal>
+
+
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-card header=&quot;Scrollable Card&quot; footer=&quot;Footer Text&quot; width=&quot;300px&quot; height=&quot;200px&quot; [scrollable]=&quot;true&quot; style=&quot;display: flex; flex-direction: column;&quot;&gt;
+                &lt;div style=&quot;flex: 1; overflow-y: auto;&quot;&gt;
+                  &lt;p&gt;
+                    This is a long content inside the card that might require scrolling. You can control the card's height 
+                    and width dynamically from the application consuming it.
+                  &lt;/p&gt;
+                  &lt;p&gt;Additional content to demonstrate scrolling behavior.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;position: sticky; bottom: 0; background: #fff; padding: 10px; border-top: 1px solid #ccc;&quot;&gt;
+                  Footer Text
+                &lt;/div&gt;
+              &lt;/giggly-card&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

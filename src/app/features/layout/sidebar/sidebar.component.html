@@ -37,5 +37,14 @@
         <li><a href="/progressbar">Progress Bar</a></li>
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Layouts')">Layouts<span class="arrow" [class.open]="activeSubmenu === 'Layouts'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Layouts'" class="submenu">
+        <li><a href="/cards">Cards</a></li>
+        <li><a href="/modal">Modal</a></li>
+      </ul>
+    </li>
   </ul>
 </aside>
