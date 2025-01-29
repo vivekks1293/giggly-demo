@@ -1,0 +1,55 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Button Component</h1>
+    <p class="description">
+        he Giggly Sidebar/Drawer is a flexible and stylish component designed to provide collapsible side navigation for
+        web applications. It enhances user experience by offering an organized way to access menu items and features
+        while maintaining a playful and professional Giggly theme.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Preview</h2>
+                <div class="button-preview">
+                    <giggly-sidebar [isOpen]="true" position="left" (toggle)="handleSidebarToggle($event)">
+                        <ul>
+                            <li>Dashboard</li>
+                            <li>Analytics</li>
+                            <li>Reports</li>
+                            <li>Settings</li>
+                        </ul>
+                    </giggly-sidebar>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-sidebar [isOpen]=&quot;true&quot; position=&quot;left&quot; (toggle)=&quot;handleSidebarToggle($event)&quot;&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;Dashboard&lt;/li&gt;
+                  &lt;li&gt;Analytics&lt;/li&gt;
+                  &lt;li&gt;Reports&lt;/li&gt;
+                  &lt;li&gt;Settings&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/giggly-sidebar&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

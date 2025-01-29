@@ -19,6 +19,11 @@ import { SnackbarComponent } from './features/feedback/snackbar/snackbar.compone
 import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component'
 import { CardComponent } from './features/layout/card/card.component';
 import { ModalsComponent } from './features/layout/modals/modals.component';
+import { AccordianComponent } from './features/layout/accordian/accordian.component';
+import { TabComponent } from './features/layout/tab/tab.component';
+import { GigglySidebarComponent } from './features/layout/giggly-sidebar/giggly-sidebar.component';
+import { TooltipComponent } from './features/layout/tooltip/tooltip.component';
+import { DividerComponent } from './features/layout/divider/divider.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -38,7 +43,12 @@ const routes: Routes = [
   { path: 'snackbar', component: SnackbarComponent },
   { path: 'progressbar', component: ProgressBarComponent },
   { path: 'cards', component: CardComponent },
-  { path: 'modal', component: ModalsComponent }
+  { path: 'modal', component: ModalsComponent },
+  { path: 'accordian', component: AccordianComponent },
+  { path: 'tabs', component: TabComponent },
+  { path: 'sidebar', component: GigglySidebarComponent },
+  { path: 'tooltip', component: TooltipComponent },
+  { path: 'divider', component: DividerComponent },
 ];
 
 @NgModule({

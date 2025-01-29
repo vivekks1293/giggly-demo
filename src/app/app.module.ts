@@ -26,6 +26,11 @@ import { SnackbarComponent } from './features/feedback/snackbar/snackbar.compone
 import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
 import { CardComponent } from './features/layout/card/card.component';
 import { ModalsComponent } from './features/layout/modals/modals.component';
+import { AccordianComponent } from './features/layout/accordian/accordian.component';
+import { TabComponent } from './features/layout/tab/tab.component';
+import { GigglySidebarComponent } from './features/layout/giggly-sidebar/giggly-sidebar.component';
+import { TooltipComponent } from './features/layout/tooltip/tooltip.component';
+import { DividerComponent } from './features/layout/divider/divider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +54,12 @@ import { ModalsComponent } from './features/layout/modals/modals.component';
     SnackbarComponent,
     ProgressBarComponent,
     CardComponent,
-    ModalsComponent
+    ModalsComponent,
+    AccordianComponent,
+    TabComponent,
+    GigglySidebarComponent,
+    TooltipComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,
