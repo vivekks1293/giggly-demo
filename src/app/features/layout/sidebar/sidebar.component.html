@@ -51,5 +51,13 @@
         <!-- <li><a href="/sidebar">Sidebar</a></li> -->
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Navigations')">Navigations<span class="arrow" [class.open]="activeSubmenu === 'Navigations'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Navigations'" class="submenu">
+        <li><a href="/breadcrumb">Breadcrumb</a></li>
+      </ul>
+    </li>
   </ul>
 </aside>

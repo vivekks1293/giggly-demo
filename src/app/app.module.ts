@@ -31,6 +31,7 @@ import { TabComponent } from './features/layout/tab/tab.component';
 import { GigglySidebarComponent } from './features/layout/giggly-sidebar/giggly-sidebar.component';
 import { TooltipComponent } from './features/layout/tooltip/tooltip.component';
 import { DividerComponent } from './features/layout/divider/divider.component';
+import { BreadcrumbComponentGiggly } from './features/navigation/breadcrumb/breadcrumb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { DividerComponent } from './features/layout/divider/divider.component';
     TabComponent,
     GigglySidebarComponent,
     TooltipComponent,
-    DividerComponent
+    DividerComponent,
+    BreadcrumbComponentGiggly
   ],
   imports: [
     BrowserModule,
