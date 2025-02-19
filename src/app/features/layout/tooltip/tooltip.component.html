@@ -1,0 +1,54 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Tooltip Component</h1>
+    <p class="description">
+        The Giggly Tooltip component is a lightweight and stylish UI element designed to provide additional context or
+        information when users interact with elements on the page. Whether triggered by hover or click, the tooltip
+        enhances usability without cluttering the UI.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Preview</h2>
+                <div class="button-preview">
+                    <giggly-tooltip content="This is a tooltip!" position="top" trigger="hover">
+                        <giggly-button variant="primary">Hover me</giggly-button>
+                    </giggly-tooltip>
+
+                    <giggly-tooltip content="Click for info!" position="right" trigger="click">
+                        <giggly-button variant="secondary">Click me</giggly-button>
+                    </giggly-tooltip>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-tooltip content=&quot;This is a tooltip!&quot; position=&quot;top&quot; trigger=&quot;hover&quot;&gt;
+                &lt;giggly-button variant=&quot;primary&quot;&gt;Hover me&lt;/giggly-button&gt;
+              &lt;/giggly-tooltip&gt;
+          
+              &lt;giggly-tooltip content=&quot;Click for info!&quot; position=&quot;right&quot; trigger=&quot;click&quot;&gt;
+                &lt;giggly-button variant=&quot;secondary&quot;&gt;Click me&lt;/giggly-button&gt;
+              &lt;/giggly-tooltip&gt;
+
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>

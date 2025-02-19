@@ -24,6 +24,14 @@ import { FileUploadComponent } from './features/Input&Forms/file-upload/file-upl
 import { AlertsComponent } from './features/feedback/alerts/alerts.component';
 import { SnackbarComponent } from './features/feedback/snackbar/snackbar.component';
 import { ProgressBarComponent } from './features/feedback/progress-bar/progress-bar.component';
+import { CardComponent } from './features/layout/card/card.component';
+import { ModalsComponent } from './features/layout/modals/modals.component';
+import { AccordianComponent } from './features/layout/accordian/accordian.component';
+import { TabComponent } from './features/layout/tab/tab.component';
+import { GigglySidebarComponent } from './features/layout/giggly-sidebar/giggly-sidebar.component';
+import { TooltipComponent } from './features/layout/tooltip/tooltip.component';
+import { DividerComponent } from './features/layout/divider/divider.component';
+import { BreadcrumbComponentGiggly } from './features/navigation/breadcrumb/breadcrumb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +53,15 @@ import { ProgressBarComponent } from './features/feedback/progress-bar/progress-
     FileUploadComponent,
     AlertsComponent,
     SnackbarComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    CardComponent,
+    ModalsComponent,
+    AccordianComponent,
+    TabComponent,
+    GigglySidebarComponent,
+    TooltipComponent,
+    DividerComponent,
+    BreadcrumbComponentGiggly
   ],
   imports: [
     BrowserModule,
