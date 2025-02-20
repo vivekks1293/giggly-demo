@@ -25,6 +25,10 @@ import { GigglySidebarComponent } from './features/layout/giggly-sidebar/giggly-
 import { TooltipComponent } from './features/layout/tooltip/tooltip.component';
 import { DividerComponent } from './features/layout/divider/divider.component';
 import { BreadcrumbComponentGiggly } from './features/navigation/breadcrumb/breadcrumb.component';
+import { StepperComponent } from './features/navigation/stepper/stepper.component';
+import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.component';
+import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
+
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -51,6 +55,9 @@ const routes: Routes = [
   { path: 'tooltip', component: TooltipComponent },
   { path: 'divider', component: DividerComponent },
   { path: 'breadcrumb', component: BreadcrumbComponentGiggly },
+  { path: 'stepper', component: StepperComponent},
+  { path: 'navbar', component: NavbarComponent},
+  { path: 'sidebar', component: NavbarSidebarComponent},
 ];
 
 @NgModule({
