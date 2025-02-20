@@ -1,0 +1,44 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Navbar Component</h1>
+    <p class="description">
+        The Giggly Navbar is a versatile, multi-level navigation component designed for modern web applications. It
+        provides N-depth menu support, allowing users to navigate complex structures effortlessly.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Preview</h2>
+                <div class="button-preview">
+                    <giggly-navbar [menuItems]="menuList" [sticky]="true" themeColor="primary"
+                        (onMenuSelect)="handleMenuClick($event)">
+                    </giggly-navbar>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-navbar [menuItems]="menuList" [sticky]="true" themeColor="primary"
+                (onMenuSelect)="handleMenuClick($event)"&gt;
+            &lt;/giggly-navbar&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
