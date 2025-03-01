@@ -62,5 +62,14 @@
         <!-- <li><a href="/sidebar">Sidebar</a></li> -->
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Data')">Data<span class="arrow" [class.open]="activeSubmenu === 'Data'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Data'" class="submenu">
+        <li><a href="/grid">Grid</a></li>
+        <!-- <li><a href="/sidebar">Sidebar</a></li> -->
+      </ul>
+    </li>
   </ul>
 </aside>
