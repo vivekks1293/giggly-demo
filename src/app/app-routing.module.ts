@@ -28,6 +28,7 @@ import { BreadcrumbComponentGiggly } from './features/navigation/breadcrumb/brea
 import { StepperComponent } from './features/navigation/stepper/stepper.component';
 import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.component';
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
+import { GridComponent } from './features/data-display/grid/grid.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'stepper', component: StepperComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'sidebar', component: NavbarSidebarComponent},
+  { path: 'grid', component: GridComponent},
 ];
 
 @NgModule({

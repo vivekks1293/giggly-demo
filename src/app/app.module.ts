@@ -35,6 +35,7 @@ import { BreadcrumbComponentGiggly } from './features/navigation/breadcrumb/brea
 import { StepperComponent } from './features/navigation/stepper/stepper.component';
 import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.component';
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
+import { GridComponent } from './features/data-display/grid/grid.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/nav
     BreadcrumbComponentGiggly,
     StepperComponent,
     NavbarComponent,
-    NavbarSidebarComponent
+    NavbarSidebarComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
