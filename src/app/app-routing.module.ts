@@ -29,6 +29,7 @@ import { StepperComponent } from './features/navigation/stepper/stepper.componen
 import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.component';
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
 import { GridComponent } from './features/data-display/grid/grid.component';
+import { TreeviewComponent } from './features/data-display/treeview/treeview.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent},
   { path: 'sidebar', component: NavbarSidebarComponent},
   { path: 'grid', component: GridComponent},
+  { path: 'treeview', component: TreeviewComponent},
 ];
 
 @NgModule({
