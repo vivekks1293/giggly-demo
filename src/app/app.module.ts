@@ -36,6 +36,7 @@ import { StepperComponent } from './features/navigation/stepper/stepper.componen
 import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.component';
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
 import { GridComponent } from './features/data-display/grid/grid.component';
+import { TreeviewComponent } from './features/data-display/treeview/treeview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { GridComponent } from './features/data-display/grid/grid.component';
     StepperComponent,
     NavbarComponent,
     NavbarSidebarComponent,
-    GridComponent
+    GridComponent,
+    TreeviewComponent
   ],
   imports: [
     BrowserModule,
