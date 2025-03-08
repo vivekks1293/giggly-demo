@@ -37,6 +37,7 @@ import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
 import { GridComponent } from './features/data-display/grid/grid.component';
 import { TreeviewComponent } from './features/data-display/treeview/treeview.component';
+import { AvatarComponent } from './features/data-display/avatar/avatar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { TreeviewComponent } from './features/data-display/treeview/treeview.com
     NavbarComponent,
     NavbarSidebarComponent,
     GridComponent,
-    TreeviewComponent
+    TreeviewComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,

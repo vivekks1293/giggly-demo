@@ -30,6 +30,7 @@ import { NavbarComponent } from './features/navigation/navigation/navbar/navbar.
 import { NavbarSidebarComponent } from './features/navigation/navbar-sidebar/navbar-sidebar.component';
 import { GridComponent } from './features/data-display/grid/grid.component';
 import { TreeviewComponent } from './features/data-display/treeview/treeview.component';
+import { AvatarComponent } from './features/data-display/avatar/avatar.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -62,6 +63,7 @@ const routes: Routes = [
   { path: 'sidebar', component: NavbarSidebarComponent},
   { path: 'grid', component: GridComponent},
   { path: 'treeview', component: TreeviewComponent},
+  { path: 'avatar', component: AvatarComponent},
 ];
 
 @NgModule({
