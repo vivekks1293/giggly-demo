@@ -1,0 +1,49 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Avatar Component</h1>
+    <p class="description">
+        The Giggly Avatar component is a stylish and customizable way to display user profile pictures or initials. It
+        ensures a seamless and visually appealing experience while maintaining the playful yet professional Giggly UI
+        theme.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Preview</h2>
+                <div class="button-preview">
+                    <giggly-avatar imageUrl="193884067.jpg" size="large"></giggly-avatar>
+
+                    <giggly-avatar name="John Doe" size="medium"></giggly-avatar>
+
+                    <giggly-avatar name="Alice Brown" size="small" shape="square" borderColor="blue"></giggly-avatar>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-avatar imageUrl="193884067.jpg" size="large"&gt;&lt;/giggly-avatar&gt;
+
+                &lt;giggly-avatar name="John Doe" size="medium"&gt;&lt;/giggly-avatar&gt;
+                
+                &lt;giggly-avatar name="Alice Brown" size="small" shape="square" borderColor="blue"&gt;&lt;/giggly-avatar&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
