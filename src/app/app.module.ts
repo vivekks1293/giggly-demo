@@ -39,6 +39,7 @@ import { GridComponent } from './features/data-display/grid/grid.component';
 import { TreeviewComponent } from './features/data-display/treeview/treeview.component';
 import { AvatarComponent } from './features/data-display/avatar/avatar.component';
 import { BadgeComponent } from './features/data-display/badge/badge.component';
+import { ChipsComponent } from './features/data-display/chips/chips.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,8 @@ import { BadgeComponent } from './features/data-display/badge/badge.component';
     GridComponent,
     TreeviewComponent,
     AvatarComponent,
-    BadgeComponent
+    BadgeComponent,
+    ChipsComponent
   ],
   imports: [
     BrowserModule,
