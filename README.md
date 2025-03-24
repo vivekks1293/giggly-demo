@@ -67,4 +67,4 @@ Use them in your templates:
 
 📚 Documentation
 
-Check out the full documentation and live examples on our Demo Page.
+Check out the full documentation and live examples on our Demo Page : **https://mygigglyui.web.app/**
