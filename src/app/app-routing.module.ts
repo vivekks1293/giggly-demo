@@ -33,6 +33,7 @@ import { TreeviewComponent } from './features/data-display/treeview/treeview.com
 import { AvatarComponent } from './features/data-display/avatar/avatar.component';
 import { BadgeComponent } from './features/data-display/badge/badge.component';
 import { ChipsComponent } from './features/data-display/chips/chips.component';
+import { CarousalComponent } from './features/media/carousal/carousal.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -68,6 +69,7 @@ const routes: Routes = [
   { path: 'avatar', component: AvatarComponent},
   { path: 'badge', component: BadgeComponent},
   { path: 'chip', component: ChipsComponent},
+  { path: 'carousal', component: CarousalComponent},
 ];
 
 @NgModule({

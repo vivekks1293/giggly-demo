@@ -1,0 +1,41 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Carousal Component</h1>
+    <p class="description">
+        The Giggly Carousel is a lively, customizable component that allows you to display images, banners, or any
+        dynamic content in a scrollable slider with smooth transitions and navigation controls. It brings a fun,
+        polished feel to your app — in true Giggly fashion.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <div class="button-preview">
+                    <giggly-carousal [items]="carouselItems" [autoSlide]="true"
+                        [slideInterval]="4000"></giggly-carousal>
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-carousal [items]="carouselItems" [autoSlide]="true" [slideInterval]="4000"&gt;&lt;/giggly-carousal&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
