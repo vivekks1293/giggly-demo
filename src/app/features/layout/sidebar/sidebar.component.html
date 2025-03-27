@@ -75,5 +75,13 @@
         <!-- <li><a href="/sidebar">Sidebar</a></li> -->
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Media')">Media<span class="arrow" [class.open]="activeSubmenu === 'Media'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Media'" class="submenu">
+        <li><a href="/carousal">Carousal</a></li>
+      </ul>
+    </li>
   </ul>
 </aside>

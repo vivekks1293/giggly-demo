@@ -40,6 +40,7 @@ import { TreeviewComponent } from './features/data-display/treeview/treeview.com
 import { AvatarComponent } from './features/data-display/avatar/avatar.component';
 import { BadgeComponent } from './features/data-display/badge/badge.component';
 import { ChipsComponent } from './features/data-display/chips/chips.component';
+import { CarousalComponent } from './features/media/carousal/carousal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,8 @@ import { ChipsComponent } from './features/data-display/chips/chips.component';
     TreeviewComponent,
     AvatarComponent,
     BadgeComponent,
-    ChipsComponent
+    ChipsComponent,
+    CarousalComponent
   ],
   imports: [
     BrowserModule,
