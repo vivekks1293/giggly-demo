@@ -34,7 +34,9 @@ import { AvatarComponent } from './features/data-display/avatar/avatar.component
 import { BadgeComponent } from './features/data-display/badge/badge.component';
 import { ChipsComponent } from './features/data-display/chips/chips.component';
 import { CarousalComponent } from './features/media/carousal/carousal.component';
-
+import { ImageViewerComponent } from './features/media/image-viewer/image-viewer.component';
+import { VideoPlayerComponent } from './features/media/video-player/video-player.component';
+import { DragListComponent } from './features/media/drag-list/drag-list.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -70,6 +72,9 @@ const routes: Routes = [
   { path: 'badge', component: BadgeComponent},
   { path: 'chip', component: ChipsComponent},
   { path: 'carousal', component: CarousalComponent},
+  { path: 'imageview', component: ImageViewerComponent},
+  { path: 'videoplayer', component: VideoPlayerComponent},
+  { path: 'draglist', component: DragListComponent},
 ];
 
 @NgModule({
