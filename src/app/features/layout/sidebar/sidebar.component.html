@@ -86,5 +86,13 @@
         <li><a href="/draglist">Drag-List</a></li>
       </ul>
     </li>
+    <li>
+      <!-- Main Menu Item -->
+      <a href="javascript:void(0)" (click)="toggleSubMenu('Misc')">Misc<span class="arrow" [class.open]="activeSubmenu === 'Misc'">&#9660;</span></a>
+      <!-- Submenu -->
+      <ul *ngIf="activeSubmenu === 'Misc'" class="submenu">
+        <li><a href="/voting">Voting</a></li>
+      </ul>
+    </li>
   </ul>
 </aside>

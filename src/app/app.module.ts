@@ -44,6 +44,7 @@ import { CarousalComponent } from './features/media/carousal/carousal.component'
 import { ImageViewerComponent } from './features/media/image-viewer/image-viewer.component';
 import { VideoPlayerComponent } from './features/media/video-player/video-player.component';
 import { DragListComponent } from './features/media/drag-list/drag-list.component';
+import { VotingComponent } from './features/misc/voting/voting.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +86,8 @@ import { DragListComponent } from './features/media/drag-list/drag-list.componen
     CarousalComponent,
     ImageViewerComponent,
     VideoPlayerComponent,
-    DragListComponent
+    DragListComponent,
+    VotingComponent
   ],
   imports: [
     BrowserModule,
