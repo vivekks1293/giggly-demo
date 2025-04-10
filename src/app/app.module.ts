@@ -45,6 +45,8 @@ import { ImageViewerComponent } from './features/media/image-viewer/image-viewer
 import { VideoPlayerComponent } from './features/media/video-player/video-player.component';
 import { DragListComponent } from './features/media/drag-list/drag-list.component';
 import { VotingComponent } from './features/misc/voting/voting.component';
+import { DraggableWindowComponent } from './features/layout/draggable-window/draggable-window.component';
+import { GigglyContextMenuComponent } from './features/misc/giggly-context-menu/giggly-context-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +89,9 @@ import { VotingComponent } from './features/misc/voting/voting.component';
     ImageViewerComponent,
     VideoPlayerComponent,
     DragListComponent,
-    VotingComponent
+    VotingComponent,
+    DraggableWindowComponent,
+    GigglyContextMenuComponent
   ],
   imports: [
     BrowserModule,
