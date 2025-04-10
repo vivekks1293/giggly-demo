@@ -46,6 +46,7 @@ import { VideoPlayerComponent } from './features/media/video-player/video-player
 import { DragListComponent } from './features/media/drag-list/drag-list.component';
 import { VotingComponent } from './features/misc/voting/voting.component';
 import { DraggableWindowComponent } from './features/layout/draggable-window/draggable-window.component';
+import { GigglyContextMenuComponent } from './features/misc/giggly-context-menu/giggly-context-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +90,8 @@ import { DraggableWindowComponent } from './features/layout/draggable-window/dra
     VideoPlayerComponent,
     DragListComponent,
     VotingComponent,
-    DraggableWindowComponent
+    DraggableWindowComponent,
+    GigglyContextMenuComponent
   ],
   imports: [
     BrowserModule,
