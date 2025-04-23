@@ -40,6 +40,7 @@ import { DragListComponent } from './features/media/drag-list/drag-list.componen
 import { VotingComponent } from './features/misc/voting/voting.component';
 import { DraggableWindowComponent } from './features/layout/draggable-window/draggable-window.component';
 import { GigglyContextMenuComponent } from './features/misc/giggly-context-menu/giggly-context-menu.component';
+import { LoaderComponent } from './features/misc/loader/loader.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'basicbutton', component: BasicButtonComponent },
@@ -81,6 +82,7 @@ const routes: Routes = [
   { path: 'voting', component: VotingComponent},
   { path: 'dragwindow', component: DraggableWindowComponent},
   { path: 'context', component: GigglyContextMenuComponent},
+  { path: 'loader', component: LoaderComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,46 @@
+<div class="main-container">
+    <h1 class="main-heading">Giggly Loaders Component</h1>
+    <p class="description">
+        The Giggly Loader is a stylish, animated indicator used to represent loading states in your application. It
+        brings charm and interactivity to otherwise static wait times, keeping the user experience engaging and on-brand
+        with the Giggly theme.
+    </p>
+    <div class="tabs-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
+                Button Preview
+            </button>
+            <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
+                Usage Code
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Button Preview Tab -->
+            <div *ngIf="activeTab === 'preview'">
+                <h2>Preview</h2>
+                <div class="button-preview">
+                    <giggly-loader type="dots"></giggly-loader>
+                    <giggly-loader type="ring" size="50px" color="blue"></giggly-loader>
+                    <giggly-loader type="bubbles" size="40px"></giggly-loader>
+
+                </div>
+            </div>
+
+            <!-- Usage Code Tab -->
+            <div *ngIf="activeTab === 'usage'">
+                <h2>How to Use</h2>
+                <pre class="code-container">
+              <code class="code-block">
+                &lt;giggly-loader type="dots"&gt;&lt;/giggly-loader&gt;
+                &lt;giggly-loader type="ring" size="50px" color="blue"&gt;&lt;/giggly-loader&gt;
+                &lt;giggly-loader type="bubbles" size="40px"&gt;&lt;/giggly-loader&gt;
+              </code>
+            </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
