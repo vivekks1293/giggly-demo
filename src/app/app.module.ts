@@ -47,6 +47,7 @@ import { DragListComponent } from './features/media/drag-list/drag-list.componen
 import { VotingComponent } from './features/misc/voting/voting.component';
 import { DraggableWindowComponent } from './features/layout/draggable-window/draggable-window.component';
 import { GigglyContextMenuComponent } from './features/misc/giggly-context-menu/giggly-context-menu.component';
+import { LoaderComponent } from './features/misc/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +92,8 @@ import { GigglyContextMenuComponent } from './features/misc/giggly-context-menu/
     DragListComponent,
     VotingComponent,
     DraggableWindowComponent,
-    GigglyContextMenuComponent
+    GigglyContextMenuComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
