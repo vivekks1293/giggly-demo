@@ -11,6 +11,7 @@ export class SidebarComponent {
   activeSubmenu: string | null = null; 
 
   toggleSubMenu(menu: string): void {
+    debugger;
     this.activeSubmenu = this.activeSubmenu === menu ? null : menu;
   }
 }
