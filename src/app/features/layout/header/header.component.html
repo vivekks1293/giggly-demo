@@ -1,12 +1,21 @@
-<!-- <header class="app-header">
-  <div class="logo" style="display: flex; align-items: center; cursor: pointer;" (click)="navigateToDashboard()">
-    <img src="assets/logo.png" alt="Giggly UI Logo" style="height: 40px; margin-right: 10px;">
-    <h1>Giggly UI</h1>
-</div>
-  </header> -->
-  <header class="app-header">
-    <div class="logo" style="display: flex; align-items: center; cursor: pointer;" (click)="navigateToDashboard()">
-        <img *ngIf="isClient" src="glogo.png" alt="Giggly UI Logo" class="logo-image" style="height: 40px; margin-right: 10px;">
-        <h1>Giggly UI</h1>
+<!-- Header HTML -->
+<header class="app-header">
+  <div class="logo">
+    <div style="display: flex; align-items: center;">
+      <img *ngIf="isClient" src="glogo.png" alt="Giggly UI Logo" class="logo-image" style="height: 40px; margin-right: 10px;">
+      <h1 style="margin: 0;"><span class="bounce">G</span><span class="wiggle">i</span><span class="bounce">g</span><span class="wiggle">g</span><span class="bounce">l</span><span class="wiggle">y</span></h1>
     </div>
+  </div>
+  <!-- <nav>
+    <ul>
+      <li><a href="#" class="nav-item">Home</a></li>
+      <li><a href="#" class="nav-item">Features</a></li>
+      <li><a href="#" class="nav-item">Pricing</a></li>
+      <li><a href="#" class="nav-item">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="action-buttons">
+    <button class="sign-up">Sign Up</button>
+    <button class="login">Login</button>
+  </div> -->
 </header>
