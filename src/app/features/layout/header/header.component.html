@@ -2,7 +2,7 @@
 <header class="app-header">
   <div class="logo">
     <div style="display: flex; align-items: center;">
-      <img *ngIf="isClient" src="glogo.png" alt="Giggly UI Logo" class="logo-image" style="height: 40px; margin-right: 10px;">
+      <img *ngIf="isClient" (click)="navigateToDashboard()" src="glogo.png" alt="Giggly UI Logo" class="logo-image" style="height: 40px; margin-right: 10px; cursor: pointer;">
       <h1 style="margin: 0;"><span class="bounce">G</span><span class="wiggle">i</span><span class="bounce">g</span><span class="wiggle">g</span><span class="bounce">l</span><span class="wiggle">y</span></h1>
     </div>
   </div>

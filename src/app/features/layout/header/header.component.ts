@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(private router: Router) { }
-  isClient = false;
+  isClient = true;
 
   ngOnInit() {
     this.isClient = true;
   }
   navigateToDashboard() {
+    debugger;
     this.router.navigate(['/']);
   }
 }
