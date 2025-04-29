@@ -21,26 +21,42 @@
             <div *ngIf="activeTab === 'preview'">
                 <h2>Button Preview</h2>
                 <div class="button-preview">
-                    <giggly-button variant="primary">Primary Button</giggly-button>
+                    <giggly-button (onClick)="handleClick()" variant="primary">Primary Button</giggly-button>
                     <giggly-button variant="secondary">Secondary Button</giggly-button>
+                    <giggly-button variant="danger">Danger Button</giggly-button>
+                    <giggly-button variant="bubbly">Bubbly Button</giggly-button>
+                    <giggly-button variant="bouncy">Bouncy Button</giggly-button>
                     <giggly-button [variant]="'primary'" [disabled]="true">Disabled Button</giggly-button>
                     <giggly-button variant="playful">Playful Button</giggly-button>
+                    <giggly-button size="small">Small Button</giggly-button>
+                    <giggly-button size="medium">Medium Button</giggly-button>
+                    <giggly-button size="large">Large Button</giggly-button>
                 </div>
             </div>
 
             <!-- Usage Code Tab -->
             <div *ngIf="activeTab === 'usage'">
-                <h2>How to Use</h2>
-                <pre class="code-container">
-              <code class="code-block">
-          &lt;giggly-button variant="primary"&gt;Primary Button&lt;/giggly-button&gt;
-          &lt;giggly-button variant="secondary"&gt;Secondary Button&lt;/giggly-button&gt;
-          &lt;giggly-button [variant]="'primary'" [disabled]="true"&gt;Disabled Button&lt;/giggly-button&gt;
-          &lt;giggly-button variant="playful"&gt;Playful Button&lt;/giggly-button&gt;
-              </code>
-            </pre>
-            </div>
+                <giggly-tabs [activeTabIndex]="0" style="width: 100%;">
+                    <giggly-tab name="HTML">
+                        <pre>
+&lt;giggly-button (onClick)="handleClick()" variant="primary"&gt;Primary Button&lt;/giggly-button&gt;
+&lt;giggly-button variant="secondary"&gt;Secondary Button&lt;/giggly-button&gt;
+&lt;giggly-button variant="danger"&gt;Danger Button&lt;/giggly-button&gt;
+&lt;giggly-button variant="bubbly"&gt;Bubbly Button&lt;/giggly-button&gt;
+&lt;giggly-button variant="bouncy"&gt;Bouncy Button&lt;/giggly-button&gt;
+&lt;giggly-button [variant]="'primary'" [disabled]="true"&gt;Disabled Button&lt;/giggly-button&gt;
+&lt;giggly-button variant="playful"&gt;Playful Button&lt;/giggly-button&gt;
+&lt;giggly-button size="small"&gt;Small Button&lt;/giggly-button&gt;
+&lt;giggly-button size="medium"&gt;Medium Button&lt;/giggly-button&gt;
+&lt;giggly-button size="large"&gt;Large Button&lt;/giggly-button&gt;
+                        </pre>
+                    </giggly-tab>
 
+                    <giggly-tab name="Component">
+                        <pre>handleClick() &#123; alert('Giggly Button Clicked!'); &#125;</pre>
+                    </giggly-tab>
+                </giggly-tabs>
+            </div>
         </div>
     </div>
 </div>

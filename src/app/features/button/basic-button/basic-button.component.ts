@@ -16,4 +16,5 @@ export class BasicButtonComponent {
   handleClick() {
     alert('Giggly Button Clicked!');
   }
+  
 }
