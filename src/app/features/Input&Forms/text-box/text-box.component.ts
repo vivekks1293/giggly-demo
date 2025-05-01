@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-
+interface ContactModel {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 @Component({
   selector: 'app-text-box',
   standalone: false,
@@ -17,4 +22,16 @@ export class TextBoxComponent {
   handleValueChange(value: string) {
     console.log('Input value changed:', value);
   }
+
+  contactModel: ContactModel = {
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
+  onPhoneChange(value: string): void {
+    console.log('Phone changed:', value);
+  }
+  
 }

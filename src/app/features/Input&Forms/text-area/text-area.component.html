@@ -1,8 +1,9 @@
 <div class="main-container">
     <h1 class="main-heading">Giggly Text Area</h1>
     <p class="description">
-        The Giggly Button component provides a set of reusable buttons with various variants and states.
-        These buttons are designed to be playful, interactive, and user-friendly.
+        The Giggly Textarea is a multi-line input component designed for capturing longer text inputs in a playful yet
+        professional manner. It is part of the Giggly UI library, offering a seamless user experience with auto-resizing
+        capabilities and easy integration with Angular applications.
     </p>
     <div class="tabs-container">
         <!-- Tabs -->
@@ -19,9 +20,10 @@
         <div class="tab-content">
             <div *ngIf="activeTab === 'preview'">
                 <giggly-textarea label="Comments" placeholder="Write your thoughts..." [rows]="3" [maxRows]="6"
-                [required]="true" errorMessage="Comments are required"
-                (valueChange)="handleTextareaChange($event)"></giggly-textarea>
-                <giggly-textarea label="Feedback" placeholder="Your feedback here..." [disabled]="true"></giggly-textarea>
+                    [required]="true" errorMessage="Comments are required"
+                    (valueChange)="handleTextareaChange($event)"></giggly-textarea>
+                <giggly-textarea label="Feedback" placeholder="Your feedback here..."
+                    [disabled]="true"></giggly-textarea>
             </div>
 
             <!-- Usage Code Tab -->
