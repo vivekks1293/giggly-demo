@@ -1,12 +1,15 @@
 <div class="main-container">
     <h1 class="main-heading">Giggly Text Box</h1>
     <p class="description">
-        The Giggly Textarea is a multi-line input component designed for capturing longer text inputs in a playful yet professional manner. It is part of the Giggly UI library, offering a seamless user experience with auto-resizing capabilities and easy integration with Angular applications.
+        The Giggly TextBox is an Angular input component that combines a floating label, placeholder and built-in
+        validation (required, regex patterns) with customizable error messages. Its playful animations can be tuned via
+        the gigglyLevel (“low” | “medium” | “high”), and it binds seamlessly using [(ngModel)] for easy form
+        integration.
     </p>
     <div class="tabs-container">
         <div class="tabs">
             <button class="tab-button" [class.active]="activeTab === 'preview'" (click)="setActiveTab('preview')">
-                Button Preview
+                Preview
             </button>
             <button class="tab-button" [class.active]="activeTab === 'usage'" (click)="setActiveTab('usage')">
                 Usage Code
@@ -14,50 +17,80 @@
         </div>
         <div class="tab-content">
             <div *ngIf="activeTab === 'preview'">
-                <h3>Text Input Examples</h3>
-                <giggly-text-box label="Username" placeholder="Enter your username" [required]="true"
-                    [(ngModel)]="username" errorMessage="Username is required"
-                    (valueChange)="handleValueChange($event)"></giggly-text-box>
-
-                <giggly-text-box label="Email" placeholder="Enter your email" type="email" [required]="true"
-                    errorMessage="Email is required" (valueChange)="handleValueChange($event)"></giggly-text-box>
-
-                <giggly-text-box label="Password" placeholder="Enter your password" type="password" [required]="true"
-                    errorMessage="Password is required" [disabled]="false"></giggly-text-box>
+                <h3>Personal Information</h3>
+                <giggly-text-box label="Your Name" placeholder="Enter your full name" [(ngModel)]="contactModel.name"
+                    name="name" #name="ngModel" [required]="true" errorMessage="Please tell us your name"
+                    gigglyLevel="medium"></giggly-text-box>
+                <giggly-text-box label="Email Address" placeholder="Enter your email" [(ngModel)]="contactModel.email"
+                    name="email" #email="ngModel" [required]="true" type="email"
+                    errorMessage="Please enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    gigglyLevel="medium"></giggly-text-box>
+                <giggly-text-box label="Phone Number (Optional)" placeholder="Enter your phone number"
+                    [(ngModel)]="contactModel.phone" name="phone" #phone="ngModel" type="tel" pattern="^[0-9]{10}$"
+                    errorMessage="Please enter a valid 10-digit phone number" gigglyLevel="medium"
+                    (valueChange)="onPhoneChange($event)"></giggly-text-box>
+                <giggly-text-box label="Your Message" placeholder="What would you like to tell us?"
+                    [(ngModel)]="contactModel.message" name="message" #message="ngModel" [required]="true"
+                    [showCharCount]="true" [maxLength]="300" errorMessage="Please enter your message"
+                    gigglyLevel="high"></giggly-text-box>
             </div>
 
             <div *ngIf="activeTab === 'usage'">
-                <h2>How to Use</h2>
-                <pre class="code-container">
-              <code class="code-block">
-                &lt;giggly-text-box 
-                label="Username" 
-                placeholder="Enter your username" 
-                [required]="true"
-                [(ngModel)]="username" 
-                errorMessage="Username is required"
-                (valueChange)="handleValueChange($event)">
-              &lt;/giggly-text-box&gt;
-              
-              &lt;giggly-text-box 
-                label="Email" 
-                placeholder="Enter your email" 
-                type="email" 
-                [required]="true"
-                errorMessage="Email is required" 
-                (valueChange)="handleValueChange($event)">
-              &lt;/giggly-text-box&gt;
-              
-              &lt;giggly-text-box 
-                label="Password" 
-                placeholder="Enter your password" 
-                type="password" 
-                [required]="true"
-                errorMessage="Password is required" 
-                [disabled]="false">
-              &lt;/giggly-text-box&gt;
-              </code>
-            </pre>
+                <giggly-tabs [activeTabIndex]="0" style="width: 100%;">
+                    <giggly-tab name="HTML">
+                        <pre>
+&lt;giggly-text-box label="Your Name" placeholder="Enter your full name" &#91;&#40;ngModel&#41;&#93;="contactModel.name"
+                    name="name" #name="ngModel" &#91;required&#93;="true" 
+                    errorMessage="Please tell us your name"
+                    gigglyLevel="medium"&gt;
+&lt;/giggly-text-box&gt;
+
+&lt;giggly-text-box label="Email Address" placeholder="Enter your email" &#91;&#40;ngModel&#41;&#93;="contactModel.email"
+                    name="email" #email="ngModel" &#91;required&#93;="true" type="email"
+                    errorMessage="Please enter a valid email address" 
+                    pattern="&#91;a-z0-9._%+-&#93;+&#64;&#91;a-z0-9.-&#93;+&#92;.&#91;a-z&#93;&#123;2,&#125;$"
+                    gigglyLevel="medium"&gt;
+&lt;/giggly-text-box&gt;
+
+&lt;giggly-text-box label="Phone Number (Optional)" placeholder="Enter your phone number"
+                    &#91;&#40;ngModel&#41;&#93;="contactModel.phone" name="phone" #phone="ngModel" type="tel" 
+                    pattern="&#94;&#91;0-9&#93;&#123;10&#125;$"
+                    errorMessage="Please enter a valid 10-digit phone number" gigglyLevel="medium"
+                    &#40;valueChange&#41;="onPhoneChange&#40;$event&#41;"&gt;
+&lt;/giggly-text-box&gt;
+
+&lt;giggly-text-box label="Your Message" placeholder="What would you like to tell us?"
+                    &#91;&#40;ngModel&#41;&#93;="contactModel.message" name="message" #message="ngModel" 
+                    &#91;required&#93;="true"
+                    &#91;showCharCount&#93;="true" &#91;maxLength&#93;="300" errorMessage="Please enter your message"
+                    gigglyLevel="high"&gt;
+&lt;/giggly-text-box&gt;
+        
+                        </pre>
+                    </giggly-tab>
+
+                    <giggly-tab name="Component">
+                        <pre>
+interface ContactModel &#123;
+  name&#58; string&#59;
+  email&#58; string&#59;
+  phone&#58; string&#59;
+  message&#58; string&#59;
+&#125;
+
+contactModel&#58; ContactModel = &#123;
+  name&#58; ''&#44;
+  email&#58; ''&#44;
+  phone&#58; ''&#44;
+  message&#58; ''
+&#125;&#59;
+
+onPhoneChange&#40;value&#58; string&#41;&#58; void &#123;
+  console.log&#40;'Phone changed:', value&#41;&#59;
+&#125;
+                        </pre>
+                    </giggly-tab>
+                </giggly-tabs>
             </div>
 
         </div>
