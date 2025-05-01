@@ -1,7 +1,8 @@
 <div class="main-container">
     <h1 class="main-heading">Giggly Icon Buttons</h1>
     <p class="description">
-        The Icon Button is a reusable component designed to enhance the user interface by combining icons and button actions. This feature is part of the Giggly UI library, which focuses on playful and dynamic design elements.
+        The Icon Button is a reusable component designed to enhance the user interface by combining icons and button
+        actions. This feature is part of the Giggly UI library, which focuses on playful and dynamic design elements.
     </p>
     <div class="tabs-container">
         <!-- Tabs -->
@@ -20,26 +21,76 @@
             <div *ngIf="activeTab === 'preview'">
                 <h2>Button Preview</h2>
                 <div class="button-preview">
-                    <giggly-icon-button icon="fas fa-search" label="Search" variant="primary"></giggly-icon-button>
-                    <giggly-icon-button icon="fas fa-edit" label="Edit" variant="secondary"></giggly-icon-button>
-                    <giggly-icon-button icon="fas fa-trash" [disabled]="true" label="Delete" variant="danger"></giggly-icon-button>
-                    <giggly-icon-button icon="fas fa-times" label="Cancel" variant="secondary"></giggly-icon-button>
-                    <giggly-icon-button icon="fas fa-save" label="Save" variant="success"></giggly-icon-button>
+                    <giggly-icon-button icon="fa fa-smile" label="" variant="primary" [gigglyLevel]="'medium'"
+                        (onClick)="onButtonClick('primary')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-star" label="" variant="secondary" [gigglyLevel]="'medium'"
+                        (onClick)="onButtonClick('secondary')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-heart" label="" variant="success" [gigglyLevel]="'medium'"
+                        (onClick)="onButtonClick('success')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-bell" label="" variant="danger" [gigglyLevel]="'medium'"
+                        (onClick)="onButtonClick('danger')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-laugh-beam" label="" variant="playful" [gigglyLevel]="'high'"
+                        (onClick)="onButtonClick('playful')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-candy-cane" label="" variant="candy" [gigglyLevel]="'high'"
+                        (onClick)="onButtonClick('candy')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-magic" label="" variant="rainbow" [gigglyLevel]="'high'"
+                        (onClick)="onButtonClick('rainbow')">
+                    </giggly-icon-button>
+
+                    <giggly-icon-button icon="fa fa-times" label="" variant="primary" [disabled]="true"
+                        (onClick)="onButtonClick('disabled')">
+                    </giggly-icon-button>
                 </div>
             </div>
 
             <!-- Usage Code Tab -->
             <div *ngIf="activeTab === 'usage'">
-                <h2>How to Use</h2>
-                <pre class="code-container">
-                    <code class="code-block">
-                &lt;giggly-icon-button icon="fas fa-search" label="Search" variant="primary"&gt;&lt;/giggly-icon-button&gt;
-                &lt;giggly-icon-button icon="fas fa-edit" label="Edit" variant="secondary"&gt;&lt;/giggly-icon-button&gt;
-                &lt;giggly-icon-button icon="fas fa-trash" label="Delete" variant="danger"&gt;&lt;/giggly-icon-button&gt;
-                &lt;giggly-icon-button icon="fas fa-times" label="Cancel" variant="secondary"&gt;&lt;/giggly-icon-button&gt;
-                &lt;giggly-icon-button icon="fas fa-save" label="Save" variant="success"&gt;&lt;/giggly-icon-button&gt;
-                    </code>
-                  </pre>
+                <giggly-tabs [activeTabIndex]="0" style="width: 100%;">
+                    <giggly-tab name="HTML">
+                        <pre>
+&lt;giggly-icon-button icon=&quot;fa-smile&quot; label=&quot;Primary&quot; variant=&quot;primary&quot; [gigglyLevel]=&quot;'medium'&quot;
+ (onClick)=&quot;onButtonClick('primary')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-star&quot; label=&quot;Secondary&quot; variant=&quot;secondary&quot; [gigglyLevel]=&quot;'medium'&quot;
+ (onClick)=&quot;onButtonClick('secondary')&quot;&gt;&lt;/giggly-icon-button&gt;
+ 
+&lt;giggly-icon-button icon=&quot;fa-heart&quot; label=&quot;Success&quot; variant=&quot;success&quot; [gigglyLevel]=&quot;'medium'&quot;
+ (onClick)=&quot;onButtonClick('success')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-bell&quot; label=&quot;Danger&quot; variant=&quot;danger&quot; [gigglyLevel]=&quot;'medium'&quot; 
+(onClick)=&quot;onButtonClick('danger')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-laugh-beam&quot; label=&quot;Playful&quot; variant=&quot;playful&quot; [gigglyLevel]=&quot;'high'&quot;
+ (onClick)=&quot;onButtonClick('playful')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-candy-cane&quot; label=&quot;Candy&quot; variant=&quot;candy&quot; [gigglyLevel]=&quot;'high'&quot;
+ (onClick)=&quot;onButtonClick('candy')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-magic&quot; label=&quot;Rainbow&quot; variant=&quot;rainbow&quot; [gigglyLevel]=&quot;'high'&quot; 
+(onClick)=&quot;onButtonClick('rainbow')&quot;&gt;&lt;/giggly-icon-button&gt;
+
+&lt;giggly-icon-button icon=&quot;fa-times&quot; label=&quot;Disabled&quot; variant=&quot;primary&quot; [disabled]=&quot;true&quot;
+ (onClick)=&quot;onButtonClick('disabled')&quot;&gt;&lt;/giggly-icon-button&gt; 
+
+                        </pre>
+                    </giggly-tab>
+
+                    <giggly-tab name="Component">
+                        <pre>onButtonClick() &#123; alert('Giggly Button Clicked!'); &#125;</pre>
+                    </giggly-tab>
+                </giggly-tabs>
             </div>
 
         </div>
