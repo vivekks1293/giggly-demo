@@ -16,4 +16,8 @@ export class IconButtonComponent {
   handleClick() {
     alert('Giggly Button Clicked!');
   }
+
+  onButtonClick(e:any){
+    
+  }
 }

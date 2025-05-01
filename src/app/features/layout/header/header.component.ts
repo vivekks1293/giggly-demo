@@ -15,7 +15,6 @@ export class HeaderComponent {
     this.isClient = true;
   }
   navigateToDashboard() {
-    debugger;
     this.router.navigate(['/']);
   }
 }
