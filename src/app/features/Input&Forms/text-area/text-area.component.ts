@@ -16,4 +16,18 @@ export class TextAreaComponent {
   handleTextareaChange(value: string) {
     console.log('Textarea value:', value);
   }
+
+  feedbackModel = {
+    message: '',
+    funExperience: '',
+    suggestions: ''
+  };
+
+  onGiggle() {
+    console.log('Giggle triggered!');
+  }
+  
+  onValueChange(value: string) {
+    console.log('Value changed:', value);
+  }
 }
