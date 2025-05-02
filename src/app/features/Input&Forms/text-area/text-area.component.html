@@ -19,37 +19,63 @@
         <!-- Tab Content -->
         <div class="tab-content">
             <div *ngIf="activeTab === 'preview'">
-                <giggly-textarea label="Comments" placeholder="Write your thoughts..." [rows]="3" [maxRows]="6"
-                    [required]="true" errorMessage="Comments are required"
-                    (valueChange)="handleTextareaChange($event)"></giggly-textarea>
-                <giggly-textarea label="Feedback" placeholder="Your feedback here..."
-                    [disabled]="true"></giggly-textarea>
+                <giggly-textarea name="feedback" label="Share your feedback" placeholder="Type something..."
+                    [(ngModel)]="feedbackModel.message" #feedbackField="ngModel" [required]="true"
+                    errorMessage="Feedback is required!" [rows]="3" [giggleLevel]="'medium'"></giggly-textarea>
+
+                <giggly-textarea name="funExperience" label="Tell us about a fun experience"
+                    placeholder="Share your best memory..." [(ngModel)]="feedbackModel.funExperience"
+                    #funField="ngModel" [required]="true" errorMessage="We need at least one fun story!" [rows]="4"
+                    [giggleLevel]="'high'" [giggleEmojis]="['🥳', '✨', '🎉', '🎊', '👏']" [confettiOnComplete]="true"
+                    (giggleTriggered)="onGiggle()" (valueChange)="onValueChange($event)"></giggly-textarea>
+
+                <giggly-textarea name="suggestions" label="Any suggestions for improvement?"
+                    placeholder="Optional but appreciated..." [(ngModel)]="feedbackModel.suggestions"
+                    [giggleLevel]="'low'" [giggleSounds]="false" [rows]="2"></giggly-textarea>
             </div>
 
             <!-- Usage Code Tab -->
             <div *ngIf="activeTab === 'usage'">
-                <h2>How to Use</h2>
-                <pre class="code-container">
-              <code class="code-block">
-                &lt;giggly-textarea 
-                label="Comments" 
-                placeholder="Write your thoughts..." 
-                [rows]="3" 
-                [maxRows]="6"
-                [required]="true" 
-                errorMessage="Comments are required"
-                (valueChange)="handleTextareaChange($event)">
-            &lt;/giggly-textarea&gt;
-            
-            &lt;giggly-textarea 
-                label="Feedback" 
-                placeholder="Your feedback here..." 
-                [disabled]="true">
-            &lt;/giggly-textarea&gt;
-              </code>
-            </pre>
-            </div>
+                <giggly-tabs [activeTabIndex]="0" style="width: 100%;">
+                    <giggly-tab name="HTML">
+                        <pre>
+&lt;giggly-textarea name="feedback" label="Share your feedback" placeholder="Type something..."
+                    &#91;&#40;ngModel&#41;&#93;="feedbackModel.message" #feedbackField="ngModel" &#91;required&#93;="true"
+                    errorMessage="Feedback is required!" &#91;rows&#93;="3" 
+                    &#91;giggleLevel&#93;="'medium'"&gt;&lt;/giggly-textarea&gt;
 
+&lt;giggly-textarea name="funExperience" label="Tell us about a fun experience"
+                    placeholder="Share your best memory..." &#91;&#40;ngModel&#41;&#93;="feedbackModel.funExperience"
+                    #funField="ngModel" &#91;required&#93;="true" errorMessage="We need at least one fun story!" &#91;rows&#93;="4"
+                    &#91;giggleLevel&#93;="'high'" &#91;giggleEmojis&#93;="&#91;'🥳', '✨', '🎉', '🎊', '👏'&#93;"
+                     &#91;confettiOnComplete&#93;="true"
+                    &#40;giggleTriggered&#41;="onGiggle&#40;&#41;" &#40;valueChange&#41;="onValueChange&#40;$event&#41;"&gt;&lt;/giggly-textarea&gt;
+
+&lt;giggly-textarea name="suggestions" label="Any suggestions for improvement?"
+                    placeholder="Optional but appreciated..." &#91;&#40;ngModel&#41;&#93;="feedbackModel.suggestions"
+                    &#91;giggleLevel&#93;="'low'" &#91;giggleSounds&#93;="false" &#91;rows&#93;="2"&gt;&lt;/giggly-textarea&gt;
+
+                        </pre>
+                    </giggly-tab>
+
+                    <giggly-tab name="Component">
+                        <pre>
+feedbackModel = &#123;
+    message&#58; ''&#44;
+    funExperience&#58; ''&#44;
+    suggestions&#58; ''
+  &#125;&#59;
+
+onGiggle&#40;&#41; &#123;
+  console.log&#40;'Giggle triggered!'&#41;&#59;
+&#125;
+
+onValueChange&#40;value&#58; string&#41; &#123;
+  console.log&#40;'Value changed:', value&#41;&#59;
+&#125;
+                        </pre>
+                    </giggly-tab>
+                </giggly-tabs>
         </div>
     </div>
 </div>
