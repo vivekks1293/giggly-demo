@@ -18,7 +18,6 @@ export class RadiobuttonComponent {
 selectedValue: boolean = false;
 onGiggle(event: any) {
   console.log(`${event.message} You selected: ${event.value}`);
-  // Could show a toast notification or confetti!
 }
 
   onColorChange(value: string) {
